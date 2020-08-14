@@ -6,3 +6,5 @@ class Book():
         self.author = author
         self.genre = genre
 
+    def __repr__(self):
+        return f"{self.id}. {self.name}. {self.year}, {self.author}, {self.genre}"
