@@ -1,1 +1,4 @@
-venv/**
+venv/*
+__pycache__/
+plan.txt
+.idea/*

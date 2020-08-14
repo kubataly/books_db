@@ -3,6 +3,7 @@ from models import Book
 class BooksDBAdapter():
     def __init__(self):
         self.books = []
+        self.last_id = 1
 
     def prepare(self):
         pass
@@ -11,7 +12,9 @@ class BooksDBAdapter():
         return self.books
 
     def save_new_book(self, book: Book):
+        book.id = self.last_id
         self.books.append(book)
+        self.last_id += 2
 
     def get_book_by_id(self, id) -> Book or None:
         for book in self.books:
